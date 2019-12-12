@@ -22,10 +22,9 @@ class LoginController extends Controller
 
 		if($user){
 			$request->session()->put('uname', $request->input('username'));
-
 			$request->session()->put('user', $user);
-			echo "success";
-			//return redirect()->route('home.index');
+			return redirect()->route('admin.profile');
+			//return view('admin.index')->with($user);
 		}else{
 
 			$request->session()->flash('msg', 'invalid username/password');
@@ -43,14 +42,12 @@ class LoginController extends Controller
 		])->validate();
 
 
-		if($validation->fails()){
-            return redirect()->route('login.register');
-		}
+		
 		//$request->session()->flash('msg', 'Input Data can Not Be null');
         $user = new User();
         $user->username = $request->username;
         $user->password =$request->password;
-        $user->role =1;
+        $user->role ='user';
 
         if($user->save()){
             return redirect()->route('login.index');
@@ -60,22 +57,10 @@ class LoginController extends Controller
     
        }
 
-	   function allload(){
+	   
 
-		$users = DB::table('users')
-		->get();
-	
-	
-		return view('user.load')->with('cates', $users);
-	}
-		function load($id){
-			$users = DB::table('users')
-				->where('username','like', "%$id%")
-				->get();
-	
-	
-				return view('user.load')->with('cates', $users);
-		}
+		
+		
 }
 
 
