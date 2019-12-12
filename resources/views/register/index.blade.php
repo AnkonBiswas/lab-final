@@ -17,8 +17,8 @@
 
 		<input type="hidden" name="_token" value="{{csrf_token()}}">
 
-		<input type="text" name="username" placeholder="Username" ><br>
-		<input type="password" name="password" placeholder="Password" >
+		UserName: <input type="text" name="username" placeholder="Username" ><br>
+		Password: <input type="password" name="password" placeholder="Password" > <br>
 		<input type="submit" name="submit" value="Submit">
 
 	</form>

@@ -5,10 +5,9 @@
 	<meta charset="utf-8">
 </head>
 <body>
-	<h1>Edit Product</h1>
+	<h1>Profile</h1>
     
 <br><br>
-
 
 	<table border="0">
 		

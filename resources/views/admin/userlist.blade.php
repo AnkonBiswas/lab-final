@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>login page</title>
+	<title>User List</title>
 </head>
 <body>
 
-<input type="text" id="search" name="search" onchange="myFunction()">
+<h1>User List</h1>
 
 <div id="table">
 <table>
@@ -39,24 +39,5 @@
 </table>
 
 
-<script>
-    /*function myFunction(){
-
-(function() {
-
-
-
-    var x = document.getElementById("search").value;
-
-    
-  var imageApi = "http://localhost:8000/product/load/"+x;
-
-
-  $('#table').load(imageApi);
-
-})();
-    }
-    */
-</script>
 </body>
 </html>

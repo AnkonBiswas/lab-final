@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>login page</title>
+	<title>All Books</title>
 </head>
 <body>
 
