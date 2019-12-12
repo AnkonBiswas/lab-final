@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\User;
 use App\Book;
+use App\Cart;
 use Illuminate\Support\Facades\DB;
 use Validator;
 class BookController extends Controller
@@ -64,18 +65,24 @@ class BookController extends Controller
 
     function addtocart(Request $request, $id){
 	
-		//$request->session()->flash('msg', 'Input Data can Not Be null');
-        $cart = new Cart();
-        $cart->bookname = $request->bookname;
-        $book->author =$request->author;
-        $book->category =$request->category;
-        $book->price =$request->price;
+        //$request->session()->flash('msg', 'Input Data can Not Be null');
+        $book=DB::table('books')->where('id', $id)->get();
 
-        if($book->save()){
-            return redirect()->route('book.list');
+        
+        
+        $cart = new Cart();
+        $cart->id = $book[0]->id;
+        $cart->bookname = $book[0]->bookname;
+        $cart->author =$book[0]->author;
+        $cart->category =$book[0]->category;
+        $cart->price =$book[0]->price;
+
+        if($cart->save()){
+            return redirect()->route('customer.cart');
         }else{
             return redirect()->route('book.add');
         }
+       
     
        }
 

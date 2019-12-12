@@ -25,7 +25,7 @@
             <td>{{ $n->author }}</td>
             <td>{{ $n->category }}</td>
             <td>{{ $n->price }}</td>
-            <td><a href="/customer/addtocart/>{{ $n->id }}">Add To Cart</a></td>
+            <td><a href="/customer/addtocart/{{ $n->id }}">Add To Cart</a></td>
 
         </tr>
 
@@ -54,7 +54,7 @@
             <td>{{ $n->author }}</td>
             <td>{{ $n->category }}</td>
             <td>{{ $n->price }}</td>
-            <td><a href="/customer/addtocart/>{{ $n->id }}">Add To Cart</a></td>
+            <td><a href="/customer/addtocart/{{ $n->id }}">Add To Cart</a></td>
 
         </tr>
 
@@ -84,7 +84,7 @@
             <td>{{ $n->author }}</td>
             <td>{{ $n->category }}</td>
             <td>{{ $n->price }}</td>
-            <td><a href="/customer/addtocart/>{{ $n->id }}">Add To Cart</a></td>
+            <td><a href="/customer/addtocart/{{ $n->id }}">Add To Cart</a></td>
 
         </tr>
 
@@ -113,7 +113,7 @@
             <td>{{ $n->author }}</td>
             <td>{{ $n->category }}</td>
             <td>{{ $n->price }}</td>
-            <td><a href="/customer/addtocart/>{{ $n->id }}">Add To Cart</a></td>
+            <td><a href="/customer/addtocart/{{ $n->id }}">Add To Cart</a></td>
 
         </tr>
 

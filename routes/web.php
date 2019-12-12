@@ -42,4 +42,4 @@ Route::get('/customer/booklist', 'BookController@listcust')->name('book.custbook
 
 Route::get('/customer/addtocart/{id}', 'BookController@addtocart')->name('book.addtocart');
 
-Route::get('/customer/cart', 'CustomerController@viewcart')->name('customer.viewcart');
+Route::get('/customer/cart', 'CustomerController@cart')->name('customer.cart');
